@@ -12,7 +12,7 @@ const Tools = () => {
   }
   return (
     <div className='lg:px-7 md:px-5 px-3 my-10'>
-      <h1 className="text-center text-secondary font-bold text-4xl mb-6">FEATURE_TOOLS</h1>
+      <h1 className="text-center text-secondary font-bold md:text-4xl my-8 sm:text-3xl text-2xl">FEATURE_TOOLS</h1>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-6">
         {
           tools.map(tool => <ToolsCard
