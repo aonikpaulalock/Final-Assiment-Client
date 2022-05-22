@@ -1,0 +1,57 @@
+[
+  {
+    "_id": 1,
+    "name": "3PFM-0050 3-Ply General Purpose Face Mask",
+    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus aliquam corrupti deserunt reprehenderit facilis praesentium vero aspernatur fugiat deleniti ipsam",
+    "minimumOrderQuantity":"200",
+    "availableQuantity":"1200",
+    "price":"78.00 – $115.00",
+    "img":"https://i.ibb.co/Fh3q1sX/insta-6-jpg.webp"
+  },
+  {
+    "_id": 2,
+    "name": "3PFM-0050 3-Ply General Purpose Face Mask",
+    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus aliquam corrupti deserunt reprehenderit facilis praesentium vero aspernatur fugiat deleniti ipsam",
+    "minimumOrderQuantity":"200",
+    "availableQuantity":"1200",
+    "price":"78.00 – $115.00",
+    "img":"https://i.ibb.co/zJ8VtSP/product-3-jpg.webp"
+  },
+  {
+    "_id": 3,
+    "name": "3PFM-0050 3-Ply General Purpose Face Mask",
+    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus aliquam corrupti deserunt reprehenderit facilis praesentium vero aspernatur fugiat deleniti ipsam",
+    "minimumOrderQuantity":"200",
+    "availableQuantity":"1200",
+    "price":"78.00 – $115.00",
+    "img":"https://i.ibb.co/VmvZtws/product-17-jpg.webp"
+  },
+  {
+    "_id": 4,
+    "name": "3PFM-0050 3-Ply General Purpose Face Mask",
+    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus aliquam corrupti deserunt reprehenderit facilis praesentium vero aspernatur fugiat deleniti ipsam",
+    "minimumOrderQuantity":"200",
+    "availableQuantity":"1200",
+    "price":"78.00 – $115.00",
+    "img":" https://i.ibb.co/Gpph0Ks/insta-4-jpg.webp"
+  },
+  {
+    "_id": 5,
+    "name": "3PFM-0050 3-Ply General Purpose Face Mask",
+    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus aliquam corrupti deserunt reprehenderit facilis praesentium vero aspernatur fugiat deleniti ipsam",
+    "minimumOrderQuantity":"200",
+    "availableQuantity":"1200",
+    "price":"78.00 – $115.00",
+    "img":"https://i.ibb.co/DL35LFP/insta-3-jpg.webp"
+
+  },
+  {
+    "_id": 6,
+    "name": "3PFM-0050 3-Ply General Purpose Face Mask",
+    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus aliquam corrupti deserunt reprehenderit facilis praesentium vero aspernatur fugiat deleniti ipsam",
+    "minimumOrderQuantity":"200",
+    "availableQuantity":"1200",
+    "price":"78.00 – $115.00",
+    "img":"https://i.ibb.co/B6Lq7h2/insta-5-jpg.webp"
+  }
+]
