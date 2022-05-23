@@ -9,7 +9,10 @@ import Login from './Pages/Login/Login';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Notfond from './Pages/Notfound/Notfond';
 import Signup from './Pages/Login/Signup';
-
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Order from './Pages/Order/Order';
+import RequireAuth from './Pages/Login/RequireAuth';
 function App() {
   return (
     <div className="App">
@@ -20,11 +23,13 @@ function App() {
         <Route path="/profile" element={<MyProfile />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
+        <Route path="/order/:id"element={<RequireAuth><Order/></RequireAuth>}></Route>
         <Route path="/dashboard" element={<Dashboard />}>
           
         </Route>
         <Route path="*" element={<Notfond />}></Route>
       </Routes>
+      <ToastContainer/>
     </div>
   );
 }

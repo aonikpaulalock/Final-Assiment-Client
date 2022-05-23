@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase.init';
 import Loading from '../Shared/Loading';
 import signup from "../../Assets/Vouser/login.png"
+import { toast } from 'react-toastify';
 const Signup = () => {
   const navigate = useNavigate()
   const location = useLocation()
@@ -28,7 +29,7 @@ const Signup = () => {
     return <Loading />
   }
   if (googleUser || createUser) {
-    navigate("/appionment")
+    navigate("/")
     console.log(googleUser, createUser);
   }
 
@@ -38,6 +39,7 @@ const Signup = () => {
     await createUserWithEmailAndPassword(data.email, data.password)
     await updateProfile({ displayName: data.name });
     console.log(data)
+    toast.success("Your Form Submited Successfully")
   };
   return (
     <div>
