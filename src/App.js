@@ -16,6 +16,7 @@ import RequireAuth from './Pages/Login/RequireAuth';
 import MyOrder from './Pages/Dashboard/MyOrder';
 import AddReview from './Pages/Dashboard/AddReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
+import AllUser from './Pages/Dashboard/AllUser';
 function App() {
   return (
     <div className="App">
@@ -28,9 +29,10 @@ function App() {
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/order/:id" element={<RequireAuth><Order /></RequireAuth>}></Route>
         <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>}>
-         <Route index element={<MyOrder/>}></Route>
-         <Route path="review" element={<AddReview/>}></Route>
-         <Route path="profile" element={<MyProfile/>}></Route>
+          <Route index element={<MyOrder />}></Route>
+          <Route path="review" element={<AddReview />}></Route>
+          <Route path="profile" element={<MyProfile />}></Route>
+          <Route path="users" element={<AllUser />}></Route>
         </Route>
         <Route path="*" element={<Notfond />}></Route>
       </Routes>
