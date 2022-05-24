@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 import auth from '../../Firebase.init';
 
 const Header = () => {
+  const logout = () => {
+    signOut(auth)
+    localStorage.removeItem("accessToken")
+  }
   const [user] = useAuthState(auth)
   const navMenu =
     <>
@@ -14,7 +18,7 @@ const Header = () => {
       {
         user && <li><Link to="/dashboard">Dashboard</Link></li>
       }
-      {!user ? <li><Link to="/login">login</Link></li> : <li><Link to="" onClick={() => signOut(auth)}>Logout</Link></li>}
+      {!user ? <li><Link to="/login">login</Link></li> : <li><Link to="" onClick={logout}>Logout</Link></li>}
     </>
 
   return (

@@ -14,7 +14,7 @@ const Signup = () => {
 
   const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
 
-  
+
   // Email Password base Create user
   const [createUserWithEmailAndPassword, createUser, createLoading, createError
   ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
@@ -31,17 +31,14 @@ const Signup = () => {
   if (googleLoading || createLoading) {
     return <Loading />
   }
-  if (googleUser || createUser) {
-    // navigate("/")
-    console.log(googleUser, createUser);
+  if (token) {
+    navigate("/")
   }
-
 
   // handle From submit
   const onSubmit = async data => {
     await createUserWithEmailAndPassword(data.email, data.password)
     await updateProfile({ displayName: data.name });
-    console.log(data)
     toast.success("Your Form Submited Successfully")
   };
   return (

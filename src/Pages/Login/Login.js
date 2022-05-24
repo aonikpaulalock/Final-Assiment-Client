@@ -8,6 +8,7 @@ import Loading from '../Shared/Loading';
 import { useLocation, useNavigate, Navigate, Link } from 'react-router-dom';
 import { data } from 'autoprefixer';
 import auth from '../../Firebase.init';
+import useToken from '../../Hooks/useToken';
 const Login = () => {
   const navigate = useNavigate()
   const location = useLocation()
@@ -19,15 +20,17 @@ const Login = () => {
   // Email Password Authentication
   const [signInWithEmailAndPassword, signUser, signLoading, signError,
   ] = useSignInWithEmailAndPassword(auth);
+
+  const [token] = useToken(googleUser || signUser)
   // React-Hooks Forms
   const { register, formState: { errors }, handleSubmit } = useForm();
 
   // Handle Firebase Error 
   useEffect(() => {
-    if (googleUser || signUser) {
+    if (token) {
       navigate(from, { replace: true });
     }
-  }, [googleUser, signUser, navigate, from])
+  }, [token, navigate, from])
   let errorFirebase;
   if (googleError || signError) {
     errorFirebase = <span className="text-semibold text-red-400">{googleError?.message || signError?.message}</span>
