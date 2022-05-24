@@ -10,8 +10,10 @@ const Header = () => {
     <>
       <li><Link to="/">Home</Link></li>
       <li><Link to="/blogs">Blogs</Link></li>
-      <li><Link to="/profile">My-Profile</Link></li>
-      <li><Link to="/dashboard">Dashboard</Link></li>
+      <li><Link to="/myPortpolio">My-Portpolio</Link></li>
+      {
+        user && <li><Link to="/dashboard">Dashboard</Link></li>
+      }
       {!user ? <li><Link to="/login">login</Link></li> : <li><Link to="" onClick={() => signOut(auth)}>Logout</Link></li>}
     </>
 
@@ -33,6 +35,7 @@ const Header = () => {
           {navMenu}
         </ul>
       </div>
+      <li className=''><label for="my-drawer-2" class="btn btn-primary drawer-button md:hidden md:text-right">open</label></li>
     </div>
   );
 };
