@@ -6,6 +6,7 @@ import auth from '../../Firebase.init';
 import Loading from '../Shared/Loading';
 import signup from "../../Assets/Vouser/login.png"
 import { toast } from 'react-toastify';
+import useToken from '../../Hooks/useToken';
 const Signup = () => {
   const navigate = useNavigate()
   const location = useLocation()
@@ -13,9 +14,11 @@ const Signup = () => {
 
   const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
 
+  
   // Email Password base Create user
   const [createUserWithEmailAndPassword, createUser, createLoading, createError
   ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+  const [token] = useToken(googleUser || createUser)
   const [updateProfile, updating, upError] = useUpdateProfile(auth);
   // React-Hooks Forms
   const { register, formState: { errors }, handleSubmit } = useForm();
@@ -29,7 +32,7 @@ const Signup = () => {
     return <Loading />
   }
   if (googleUser || createUser) {
-    navigate("/")
+    // navigate("/")
     console.log(googleUser, createUser);
   }
 
@@ -120,7 +123,7 @@ const Signup = () => {
                   </label>
                   {errorFirebase}
                 </div>
-                <button type="submit" class="btn btn-secondary rounded-full px-14 py-0 text-white font-bold w-full">Login</button>
+                <button type="submit" class="btn btn-secondary rounded-full px-14 py-0 text-white font-bold w-full">Signup</button>
                 <p className="text-accent mt-2">Already have an account ? <Link className='font-medium text-secondary' to="/login">Please Login</Link></p>
               </form>
               <div class="divider text-accent">OR</div>
