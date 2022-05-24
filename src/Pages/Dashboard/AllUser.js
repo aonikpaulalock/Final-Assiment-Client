@@ -4,10 +4,10 @@ import Loading from "../Shared/Loading"
 import UserAdmin from './UserAdmin';
 const AllUser = () => {
   const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/users', {
-    // method: 'GET',
-    // headers: {
-    //   authorization: `Bearer ${localStorage.getItem('accessToken')}`
-    // }
+    method: 'GET',
+    headers: {
+      authorization: `Bearer ${localStorage.getItem('accessToken')}`
+    }
   }).then(res => res.json()));
   if (isLoading) {
     return <Loading></Loading>
@@ -31,6 +31,7 @@ const AllUser = () => {
               key={user._id}
               index={index}
               user={user}
+              refetch={refetch}
             >
             </UserAdmin>)
           }
