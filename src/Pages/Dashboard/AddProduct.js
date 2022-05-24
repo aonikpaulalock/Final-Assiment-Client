@@ -25,7 +25,7 @@ const AddProduct = () => {
   return (
     <div>
       <h1 className='text-3xl text-aceent font-bold my-6'>Add Product</h1>
-      <div className='w-6/12 bg-base-200 mx-auto p-8 rounded-lg shadow-xl'>
+      <div className='md:w-6/12 w-full bg-base-200 mx-auto p-8 rounded-lg shadow-xl'>
         <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
           <input className='mb-3 input w-full max-w-md' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
           <textarea className='mb-3 input w-full max-w-md' placeholder='Description' {...register("description")} />

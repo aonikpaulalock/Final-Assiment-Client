@@ -19,6 +19,8 @@ import MyProfile from './Pages/Dashboard/MyProfile';
 import AllUser from './Pages/Dashboard/AllUser';
 import RequireAdmin from './Pages/Login/RequiredAdmin';
 import AddProduct from './Pages/Dashboard/AddProduct';
+import ManageProduct from './Pages/Dashboard/ManageProduct';
+import MangeOrders from './Pages/Dashboard/MangeOrders';
 function App() {
   return (
     <div className="App">
@@ -36,6 +38,8 @@ function App() {
           <Route path="profile" element={<MyProfile />}></Route>
           <Route path="users" element={<RequireAdmin><AllUser /></RequireAdmin>}></Route>
           <Route path="addProduct" element={<RequireAdmin><AddProduct /></RequireAdmin>}></Route>
+          <Route path="manage" element={<RequireAdmin><ManageProduct /></RequireAdmin>}></Route>
+          <Route path="manageOrder" element={<RequireAdmin><MangeOrders /></RequireAdmin>}></Route>
         </Route>
         <Route path="*" element={<Notfond />}></Route>
       </Routes>

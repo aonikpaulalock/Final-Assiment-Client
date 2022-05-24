@@ -32,7 +32,7 @@ const Signup = () => {
     return <Loading />
   }
   if (token) {
-    navigate("/")
+    navigate("/dashboard")
   }
 
   // handle From submit

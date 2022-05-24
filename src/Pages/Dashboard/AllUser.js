@@ -13,7 +13,7 @@ const AllUser = () => {
     return <Loading></Loading>
   }
   return (
-    <div className=' px-20'>
+    <div className='px-20'>
       <h1 className='text-3xl text-aceent font-bold my-6'>All Users And Make Admin</h1>
       <table class="table w-full">
 

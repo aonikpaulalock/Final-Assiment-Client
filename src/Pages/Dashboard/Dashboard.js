@@ -11,7 +11,6 @@ const Dashboard = () => {
       <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content  bg-base-500">
         {/* <!-- Page content here --> */}
-        <h1 className='text-bold text-accent'>My DashBoard</h1>
         <Outlet></Outlet>
         {/* <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label> */}
 
@@ -59,6 +58,23 @@ const Dashboard = () => {
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
                   </svg>
                   <span class="whitespace-nowrap font-semibold text-accent">Add Product</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/dashboard/manage" class="text-base font-normal">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                  </svg>
+                  <span class="whitespace-nowrap font-semibold text-accent">Manage Product</span>
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/dashboard/manageOrder" class="text-base font-normal">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                  </svg>
+                  <span class="whitespace-nowrap font-semibold text-accent">Manage Orders</span>
                 </Link>
               </li>
 
