@@ -17,7 +17,6 @@ const AddReview = () => {
       .then(result => {
         toast("Thank you your valuable feedback")
         reset()
-        console.log(result);
       })
   }
   return (

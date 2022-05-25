@@ -5,7 +5,7 @@ import auth from '../../Firebase.init';
 import { toast } from 'react-toastify';
 const MyProfile = () => {
   const [user] = useAuthState(auth)
-  const { register, formState: { errors }, handleSubmit } = useForm();
+  const { register, formState: { errors }, handleSubmit,reset } = useForm();
   const onSubmit = data => {
     const url = "http://localhost:5000/profiles"
     fetch(url, {
@@ -18,9 +18,8 @@ const MyProfile = () => {
       .then(res => res.json())
       .then(result => {
         toast("Successfully Update Your profile")
-        console.log(result);
+        reset()
       })
-    console.log(data);
   }
   return (
     <div>

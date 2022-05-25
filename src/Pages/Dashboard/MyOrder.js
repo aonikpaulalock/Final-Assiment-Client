@@ -1,9 +1,7 @@
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useQuery } from 'react-query';
 import { Link, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
 import auth from '../../Firebase.init';
 
 const MyOrder = () => {
@@ -34,21 +32,23 @@ const MyOrder = () => {
   }, [user, navigate])
 
   const handleDelete = (id) => {
-    
-    fetch(`http://localhost:5000/orders/${id}`, {
-      method: "DELETE",
-      headers: {
-        authorization: `Bearer ${localStorage.getItem('accessToken')}`
-      },
-    })
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        if (data.deletedCount) {
-          toast("Your Is Deleted")
-          // refetch()
-        }
+    const confirmDelete = window.confirm("Are You Sure Delete Data")
+    if (confirmDelete) {
+      fetch(`http://localhost:5000/orders/${id}`, {
+        method: "DELETE",
+        headers: {
+          authorization: `Bearer ${localStorage.getItem('accessToken')}`
+        },
       })
+        .then(res => res.json())
+        .then(data => {
+          if (data.deletedCount) {
+            const filterDelete = orders.filter(order => order._id !== id)
+            setOrders(filterDelete)
+          }
+        })
+    }
+
   }
 
   return (
@@ -83,6 +83,7 @@ const MyOrder = () => {
                       <p>Transaction id: <span className='text-success'>{order.transactionId}</span></p>
                     </div>
                       :
+                      // <label onClick={() => setDeleteOrder(orders)} for="delete-modal" class="py-3 rounded-full px-14 text-white font-bold bg-red-500 border-0 cursor-pointer">Delete</label>
                       <button className='btn btn-md btn-error text-white ml-3' onClick={() => handleDelete(order._id)}>Delete</button>
                     }
                   </td>

@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import auth from '../../Firebase.init';
 
 const AddProduct = () => {
-  const { register, formState: { errors }, handleSubmit } = useForm();
+  const { register, formState: { errors }, handleSubmit,reset } = useForm();
   const onSubmit = data => {
     const url = "http://localhost:5000/tools"
     fetch(url, {
@@ -18,7 +18,7 @@ const AddProduct = () => {
     .then(res => res.json())
     .then(result => {
       toast("Your Product add  Succesfully")
-      console.log(result);
+      reset()
     })
 
   };

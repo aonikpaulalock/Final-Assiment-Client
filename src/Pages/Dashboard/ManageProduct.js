@@ -43,7 +43,6 @@ const ManageProduct = () => {
           refetch={refetch}
           setDeleteOrder={setDeleteOrder}
         >
-
         </DeleteManage>
       }
     </div>
