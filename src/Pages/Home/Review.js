@@ -1,12 +1,15 @@
 import React from 'react';
+import { useQuery } from 'react-query';
+import Loading from '../Shared/Loading';
 import Reviews from './Reviews';
 
 const Review = () => {
-  const reviews = [
-    { id: 1, name: "Jerry", rating: "5 Start", des: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, tenetur.", img: "https://i.ibb.co/k3KzzVv/people2.png" },
-    { id: 2, name: "Michel", rating: "5 Start", des: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, tenetur.", img: "https://i.ibb.co/k3KzzVv/people2.png" },
-    { id: 3, name: "Puspi", rating: "5 Start", des: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, tenetur.", img: "https://i.ibb.co/k3KzzVv/people2.png" },
-  ]
+  const { data: reviews, isLoading } = useQuery('reviews', () => fetch('http://localhost:5000/reviews')
+    .then(res => res.json()));
+
+  if (isLoading) {
+    return <Loading />
+  }
   return (
     <div className='lg:px-12'>
       <h1 className="text-center text-accent font-bold md:text-4xl my-8 sm:text-3xl text-2xl">TESTIMONIALS</h1>

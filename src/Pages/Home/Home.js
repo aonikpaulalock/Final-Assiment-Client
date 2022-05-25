@@ -13,12 +13,11 @@ const Home = () => {
   return (
     <>
       <Banner/>
-      <Sale/>
+      <Brand/>
       <Tools/>
       <Summery/>
       <FetureShop/>
       <Review/>
-      <Brand/>
       <Contact/>
       <Footer/>
     </>

@@ -12,15 +12,15 @@ const Footer = () => {
       <div class="md:flex md:justify-between text-white">
         <div class="mb-6 md:mb-0">
           <Link to="https://flowbite.com" class="flex items-center">
-            <span class="self-center text-2xl font-semibold whitespace-nowrap">Flowbite</span>
+            <span class="self-center text-2xl font-bold whitespace-nowrap">TM_Manufacturer</span>
           </Link>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Resources</h2>
+            <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white font-bold">Resources</h2>
             <ul class="">
               <li class="mb-4">
-                <Link to="https://flowbite.com" class="hover:underline text-white">Flowbite</Link>
+                <Link to="https://flowbite.com" class="hover:underline text-white">ThemeForest</Link>
               </li>
               <li>
                 <Link to="https://tailwindcss.com/" class="hover:underline text-white">Tailwind CSS</Link>
@@ -28,18 +28,18 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Follow us</h2>
+            <h2 class="mb-6 text-sm font-semibold uppercase text-white font-bold">Follow us</h2>
             <ul class="text-white">
               <li class="mb-4">
-                <Link to="https://github.com/themesberg/flowbite" class="hover:underline ">Github</Link>
+                <Link to="https://github.com/themesberg/flowbite" class="hover:underline ">Linkden</Link>
               </li>
               <li>
-                <Link to="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</Link>
+                <Link to="https://discord.gg/4eeurUVvTy" class="hover:underline">Github</Link>
               </li>
             </ul>
           </div>
           <div>
-            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Legal</h2>
+            <h2 class="mb-6 text-sm font-semibold uppercase text-white font-bold">Legal</h2>
             <ul class="text-white">
               <li class="mb-4">
                 <Link to="#" class="hover:underline">Privacy Policy</Link>
@@ -52,8 +52,8 @@ const Footer = () => {
         </div>
       </div>
       <hr class="my-6 border-1 border-primary  sm:mx-auto lg:my-8" />
-      <div class="sm:flex sm:items-center sm:justify-between">
-        <span class="text-white">© 2022 <Link to="https://flowbite.com" class="hover:underline">Flowbite™</Link>. All Rights Reserved.
+      <div class="sm:flex sm:items-center sm:justify-between font-semibold">
+        <span class="text-white">© 2022 <Link to="https://flowbite.com" class="hover:underline">TM_Manufacturer</Link>. All Rights Reserved.
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <Link to="#" class="text-white hover:text-secondary">

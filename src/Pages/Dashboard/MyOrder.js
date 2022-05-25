@@ -1,7 +1,7 @@
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase.init';
 
 const MyOrder = () => {
@@ -41,7 +41,8 @@ const MyOrder = () => {
               <th className="font-medium text-accent">Index</th>
               <th className="font-medium text-accent">Email</th>
               <th className="font-medium text-accent">orderName</th>
-              <th className="font-medium text-accent">Quantity</th>
+              <th className="font-medium text-accent">Price</th>
+              <th className="font-medium text-accent">Payment</th>
             </tr>
           </thead>
           <tbody>
@@ -52,7 +53,10 @@ const MyOrder = () => {
                   <th className="font-medium text-accent">{index + 1}</th>
                   <td className="font-medium text-accent">{order.email}</td>
                   <td className="font-medium text-accent text-lg">{order.productName}</td>
-                  <td className="font-medium text-accent">{order.quantity}</td>
+                  <td className="font-medium text-accent">{order.perPrice}</td>
+                  <td className="font-medium text-accent">
+                    <Link to=""></Link>
+                  </td>
                 </tr>
               </>)
             }
