@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import Loading from '../Shared/Loading';
 import ManageRow from './ManageRow';
-
+import DeleteManage from "./DeleteManage"
 const ManageProduct = () => {
+  const [deleteOrder, setDeleteOrder] = useState(null)
   const { data: tools, isLoading, refetch } = useQuery('tools', () => fetch('http://localhost:5000/tools')
     .then(res => res.json()));
   if (isLoading) {
@@ -30,11 +31,21 @@ const ManageProduct = () => {
               index={index}
               tool={tool}
               refetch={refetch}
+              setDeleteOrder={setDeleteOrder}
             >
             </ManageRow>)
           }
         </tbody>
       </table>
+      {
+        deleteOrder && <DeleteManage
+          deleteOrder={deleteOrder}
+          refetch={refetch}
+          setDeleteOrder={setDeleteOrder}
+        >
+
+        </DeleteManage>
+      }
     </div>
   );
 };
