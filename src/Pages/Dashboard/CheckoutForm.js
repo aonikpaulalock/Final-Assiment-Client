@@ -8,7 +8,8 @@ const CheckoutForm = ({ orders }) => {
   const [cardError, setCardError] = useState("")
   const [clientSecret, setClientSecret] = useState('');
   const [transactionId, setTransactionId] = useState('');
-  const { price, email, name } = orders;
+  const [processing, setProcessing] = useState(false);
+  const { _id, price, email, name } = orders;
   useEffect(() => {
     fetch('http://localhost:5000/create-payment-intent', {
       method: 'POST',
@@ -44,6 +45,7 @@ const CheckoutForm = ({ orders }) => {
     });
     setCardError(error?.message || '')
     setSuccess('');
+    setProcessing(true);
     // Confirm card
     const { paymentIntent, error: intentError } = await stripe.confirmCardPayment(
       clientSecret,
@@ -59,13 +61,34 @@ const CheckoutForm = ({ orders }) => {
     );
     if (intentError) {
       setCardError(intentError?.message);
-      // setProcessing(false);
+      setProcessing(false);
     }
     else {
       setCardError('');
       setTransactionId(paymentIntent.id);
       console.log(paymentIntent);
       setSuccess('Congrats! Your payment is completed.')
+
+      // Send Database
+      const payment = {
+        order: _id,
+        transactionId: paymentIntent.id
+      }
+      fetch(`http://localhost:5000/orders/${_id}`, {
+        method: 'PATCH',
+        headers: {
+          'content-type': 'application/json',
+          'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+        },
+        body: JSON.stringify(payment)
+      })
+      .then(res => res.json())
+        .then(data => {
+          setProcessing(false);
+          console.log(data);
+        })
+
+
     }
 
 
