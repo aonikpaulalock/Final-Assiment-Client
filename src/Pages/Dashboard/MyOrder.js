@@ -41,7 +41,7 @@ const MyOrder = () => {
               <th className="font-medium text-accent">Index</th>
               <th className="font-medium text-accent">Email</th>
               <th className="font-medium text-accent">orderName</th>
-              <th className="font-medium text-accent">Price</th>
+              <th className="font-medium text-accent">Quantity</th>
               <th className="font-medium text-accent">Payment</th>
             </tr>
           </thead>
@@ -53,9 +53,13 @@ const MyOrder = () => {
                   <th className="font-medium text-accent">{index + 1}</th>
                   <td className="font-medium text-accent">{order.email}</td>
                   <td className="font-medium text-accent text-lg">{order.productName}</td>
-                  <td className="font-medium text-accent">{order.perPrice}</td>
+                  <td className="font-medium text-accent">{order.quantity}</td>
                   <td className="font-medium text-accent">
-                    <Link to=""></Link>
+                    {(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-md btn-secondary text-white'>Payment</button></Link>}
+                    {(order.price && order.paid) && <div>
+                      <p><btn className='btn-primary text-white'>Paid</btn></p>
+                      <p>Transaction id: <span className='text-success'>{order.transactionId}</span></p>
+                    </div>}
                   </td>
                 </tr>
               </>)

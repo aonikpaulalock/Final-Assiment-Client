@@ -21,6 +21,7 @@ import RequireAdmin from './Pages/Login/RequiredAdmin';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageProduct from './Pages/Dashboard/ManageProduct';
 import MangeOrders from './Pages/Dashboard/MangeOrders';
+import Payment from './Pages/Dashboard/Payment';
 function App() {
   return (
     <div className="App">
@@ -35,6 +36,7 @@ function App() {
         <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>}>
           <Route index element={<MyOrder />}></Route>
           <Route path="review" element={<AddReview />}></Route>
+          <Route path="payment/:id" element={<Payment />}></Route>
           <Route path="profile" element={<MyProfile />}></Route>
           <Route path="users" element={<RequireAdmin><AllUser /></RequireAdmin>}></Route>
           <Route path="addProduct" element={<RequireAdmin><AddProduct /></RequireAdmin>}></Route>
