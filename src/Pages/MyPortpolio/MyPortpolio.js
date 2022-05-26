@@ -25,7 +25,7 @@ const MyPortpolio = () => {
                 <a href="https://backend-assiment-11.firebaseapp.com/" className="font-bold text-green-500 py-2" target="_blank">https://backend-assiment-11.firebaseapp.com/</a>
               </h1>
               <h1>
-                <a href="https://wedding-photographer-d90bb.firebaseapp.com/" className="font-bold text-green-500 py-2" target="_blank">https://wedding-photographer-d90bb.firebaseapp.com/</a>
+                <a href="https://final-assiment.web.app/" className="font-bold text-green-500 py-2" target="_blank">https://final-assiment.web.app/</a>
               </h1>
               <h1>
                 <a href="https://wedding-photographer-d90bb.firebaseapp.com/" className="font-bold text-green-500 py-2" target="_blank">https://wedding-photographer-d90bb.firebaseapp.com/</a>
