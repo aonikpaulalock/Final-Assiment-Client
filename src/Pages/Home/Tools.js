@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading';
 import ToolsCard from './ToolsCard';
 
 const Tools = () => {
-  const { data: tools, isLoading } = useQuery('tools', () => fetch('http://localhost:5000/tools')
+  const { data: tools, isLoading } = useQuery('tools', () => fetch('https://vast-hollows-25888.herokuapp.com/tools')
     .then(res => res.json()));
 
   if (isLoading) {

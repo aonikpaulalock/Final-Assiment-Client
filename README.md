@@ -1,6 +1,6 @@
 # Getting Started TM_Manufacturer
 
-This project was Tailwind with (https://github.com/facebook/create-react-app).
+This project was Tailwind with (https://final-assiment.web.app/).
 
 # Description
  i will try unique design and more than fuctonality

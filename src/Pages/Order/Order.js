@@ -14,7 +14,7 @@ const Order = () => {
   const [user] = useAuthState(auth)
   const { id } = useParams()
   const { data, isLoading } = useQuery('/tools', () =>
-    axios.get(`http://localhost:5000/tools/${id}`).then(response => {
+    axios.get(`https://vast-hollows-25888.herokuapp.com/tools/${id}`).then(response => {
       setProducts(response.data)
     })
   )
@@ -33,7 +33,7 @@ const Order = () => {
       productName: products.name
 
     }
-    await axios.post("http://localhost:5000/orders", order)
+    await axios.post("https://vast-hollows-25888.herokuapp.com/orders", order)
       .then((response) => {
        if(response.data.insertedId){
          toast("Your Order Successfully")

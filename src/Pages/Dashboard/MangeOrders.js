@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading';
 import OrderRow from './OrderRow';
 
 const MangeOrders = () => {
-  const { data: orders, isLoading, refetch } = useQuery('order', () => fetch('http://localhost:5000/order')
+  const { data: orders, isLoading, refetch } = useQuery('order', () => fetch('https://vast-hollows-25888.herokuapp.com/order')
     .then(res => res.json()));
   if (isLoading) {
     return <Loading />

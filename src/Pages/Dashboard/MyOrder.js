@@ -10,7 +10,7 @@ const MyOrder = () => {
   const navigate = useNavigate()
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/orders?email=${user.email}`, {
+      fetch(`https://vast-hollows-25888.herokuapp.com/orders?email=${user.email}`, {
         method: "GET",
         headers: {
           authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -34,7 +34,7 @@ const MyOrder = () => {
   const handleDelete = (id) => {
     const confirmDelete = window.confirm("Are You Sure Delete Data")
     if (confirmDelete) {
-      fetch(`http://localhost:5000/orders/${id}`, {
+      fetch(`https://vast-hollows-25888.herokuapp.com/orders/${id}`, {
         method: "DELETE",
         headers: {
           authorization: `Bearer ${localStorage.getItem('accessToken')}`

@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const DeleteManage = ({ deleteOrder, refetch, setDeleteOrder }) => {
   const { _id, name } = deleteOrder;
   const handleDelete = () => {
-    fetch(`http://localhost:5000/tools/${_id}`, {
+    fetch(`https://vast-hollows-25888.herokuapp.com/tools/${_id}`, {
       method: "DELETE",
     })
       .then(res => res.json())

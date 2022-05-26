@@ -5,7 +5,7 @@ import ManageRow from './ManageRow';
 import DeleteManage from "./DeleteManage"
 const ManageProduct = () => {
   const [deleteOrder, setDeleteOrder] = useState(null)
-  const { data: tools, isLoading, refetch } = useQuery('tools', () => fetch('http://localhost:5000/tools')
+  const { data: tools, isLoading, refetch } = useQuery('tools', () => fetch('https://vast-hollows-25888.herokuapp.com/tools')
     .then(res => res.json()));
   if (isLoading) {
     return <Loading />

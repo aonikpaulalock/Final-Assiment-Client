@@ -7,7 +7,7 @@ const MyProfile = () => {
   const [user] = useAuthState(auth)
   const { register, formState: { errors }, handleSubmit,reset } = useForm();
   const onSubmit = data => {
-    const url = "http://localhost:5000/profiles"
+    const url = "https://vast-hollows-25888.herokuapp.com/profiles"
     fetch(url, {
       method: "POST",
       headers: {

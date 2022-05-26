@@ -8,7 +8,7 @@ import CheckoutForm from './CheckoutForm';
 const stripePromise = loadStripe('pk_test_51L0ljcEIu4r15ToPEZO1QRyCh11qTJ2mq0OULDaY0ss3g41U19AcGpC1QesbBFzTLxNS0b0OvWxcLZlT1OBPzDmm00sbztt6gV');
 const Payment = () => {
   const { id } = useParams()
-  const url = `http://localhost:5000/orders/${id}`;
+  const url = `https://vast-hollows-25888.herokuapp.com/orders/${id}`;
 
   const { data: orders, isLoading } = useQuery(['orders', id], () => fetch(url, {
     method: 'GET',

@@ -3,7 +3,7 @@
 // const DeletedOrder = ({ deleteOrder, setDeleteOrder,orders}) => {
 //   // const { _id, name } = deleteOrder;
 //   const handleDelete = (id) => {
-//     fetch(`http://localhost:5000/orders/${id}`, {
+//     fetch(`https://vast-hollows-25888.herokuapp.com/orders/${id}`, {
 //       method: "DELETE",
 //       headers: {
 //         authorization: `Bearer ${localStorage.getItem('accessToken')}`

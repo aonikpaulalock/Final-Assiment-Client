@@ -7,7 +7,7 @@ import auth from '../../Firebase.init';
 const AddProduct = () => {
   const { register, formState: { errors }, handleSubmit,reset } = useForm();
   const onSubmit = data => {
-    const url = "http://localhost:5000/tools"
+    const url = "https://vast-hollows-25888.herokuapp.com/tools"
     fetch(url, {
       method: "POST",
       headers: {

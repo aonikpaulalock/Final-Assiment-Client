@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import Loading from "../Shared/Loading"
 import UserAdmin from './UserAdmin';
 const AllUser = () => {
-  const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/users', {
+  const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://vast-hollows-25888.herokuapp.com/users', {
     method: 'GET',
     headers: {
       authorization: `Bearer ${localStorage.getItem('accessToken')}`
