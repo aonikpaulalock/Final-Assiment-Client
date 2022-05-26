@@ -1,6 +1,17 @@
-# Getting Started with Create React App
+# Getting Started TM_Manufacturer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was Tailwind with (https://github.com/facebook/create-react-app).
+
+# Description
+ i will try unique design and more than fuctonality
+
+# Feature 
+* Create Manufacturer website inspiration themeforest 
+* Create home page 8 section 
+* Click order button and naviagete user order pharches page 
+* Create dashboard and aded admin role if user not admin then not see order manage  Pages
+* use firebase authentication if user log in logout do 
+* use payment method if user not payment then delete order 
 
 ## Available Scripts
 

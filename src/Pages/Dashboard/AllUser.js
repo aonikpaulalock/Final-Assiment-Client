@@ -27,7 +27,7 @@ const AllUser = () => {
         <tbody>
 
           {
-            users.map((user, index) => <UserAdmin
+            users?.map((user, index) => <UserAdmin
               key={user._id}
               index={index}
               user={user}

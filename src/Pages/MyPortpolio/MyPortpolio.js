@@ -18,12 +18,18 @@ const MyPortpolio = () => {
             <h1 className='font-bold text-2xl text-accent pb-2'>Skills : </h1>
             <h1 className="font-bold text-accent">HTML  ||  CSS   ||  Tailwind  || Boostarp </h1>
             <h1 className="font-bold text-accent py-2">Javascript  ||  React  ||  Firebase  </h1>
-            <h1 className="font-bold text-accent">Node  ||  Mongodb  ||  express  </h1>
+            <h1 className="font-bold text-accent">Node  ||  Mongodb  ||  Express  </h1>
             <div>
               <h1 className='font-bold text-2xl text-accent pb-2 mt-4'>My-Projects Link :</h1>
-              <Link to="" className="font-bold text-green-500 py-2"></Link>
-              <Link to="" className="font-bold text-green-500 py-2"></Link>
-              <Link to="" className="font-bold text-green-500 py-2"></Link>
+              <h1>
+                <a href="https://backend-assiment-11.firebaseapp.com/" className="font-bold text-green-500 py-2" target="_blank">https://backend-assiment-11.firebaseapp.com/</a>
+              </h1>
+              <h1>
+                <a href="https://wedding-photographer-d90bb.firebaseapp.com/" className="font-bold text-green-500 py-2" target="_blank">https://wedding-photographer-d90bb.firebaseapp.com/</a>
+              </h1>
+              <h1>
+                <a href="https://wedding-photographer-d90bb.firebaseapp.com/" className="font-bold text-green-500 py-2" target="_blank">https://wedding-photographer-d90bb.firebaseapp.com/</a>
+              </h1>
             </div>
           </div>
         </div>
