@@ -6,12 +6,13 @@ This project was Tailwind with (https://final-assiment.web.app/).
  i will try unique design and more than fuctonality
 
 # Feature 
-* Create Manufacturer website inspiration themeforest 
-* Create home page 8 section 
-* Click order button and naviagete user order pharches page 
-* Create dashboard and aded admin role if user not admin then not see order manage  Pages
-* use firebase authentication if user log in logout do 
-* use payment method if user not payment then delete order 
+* This is a full-stack manufacturing wbsite. Users need to log in via Email and Password or Google (also can create a new account).
+* Have an admin and user dashboard. Admin can delete, add, and manage all
+servics and normal users see all products & can order.
+* Click order button and naviagete user order pharches page .
+* Users can pay with their Crdit cards for their products.
+* use payment method if user not payment then delete order .
+* use firebase authentication if user log in logout do .
 
 ## Available Scripts
 
